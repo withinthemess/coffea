@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/illus_HomeScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/ic_illus_homescreen" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img_LogoType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="216dp"
@@ -29,24 +29,110 @@
         app:srcCompat="@drawable/logotype" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/btn_JoinUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/illus_HomeScreen"
         app:srcCompat="@drawable/btn_homescreencta" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/btnTxt_JoinUs"
+        style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:capitalize="words"
+        android:capitalize="none"
         android:text="Join Us"
         android:textColor="@color/Cloud"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_JoinUs"
+        app:layout_constraintEnd_toEndOf="@+id/btn_JoinUs"
+        app:layout_constraintStart_toStartOf="@+id/btn_JoinUs"
+        app:layout_constraintTop_toTopOf="@+id/btn_JoinUs" />
+
+    <ImageView
+        android:id="@+id/btn_JoinUsWgoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_JoinUs"
+        app:srcCompat="@drawable/btn_homescreensecondary" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_JoinUsWgoogle"
+        app:layout_constraintEnd_toEndOf="@+id/btn_JoinUsWgoogle"
+        app:layout_constraintStart_toStartOf="@+id/btn_JoinUsWgoogle"
+        app:layout_constraintTop_toTopOf="@+id/btn_JoinUsWgoogle">
+
+        <ImageView
+            android:id="@+id/img_Google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logogoogle" />
+
+        <TextView
+            android:id="@+id/btnTxt_JoinUsWgoogle"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:text="Continue with google"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_JoinWphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_JoinUsWgoogle"
+        app:srcCompat="@drawable/btn_homescreensecondary" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_JoinWphone"
+        app:layout_constraintEnd_toEndOf="@+id/btn_JoinWphone"
+        app:layout_constraintStart_toStartOf="@+id/btn_JoinWphone"
+        app:layout_constraintTop_toTopOf="@+id/btn_JoinWphone">
+
+        <ImageView
+            android:id="@+id/img_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_mobile" />
+
+        <TextView
+            android:id="@+id/btnTxt_JoinWphone"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="join with phone number"
+            android:textColor="@color/Phantom"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="48dp"
+        android:text="log in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_JoinWphone" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
