@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/illus_HomeScreen"
         android:layout_width="0dp"
-        android:layout_height="422dp"
+        android:layout_height="408dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,11 +33,11 @@
         android:id="@+id/btn_JoinUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginBottom="24dp"
         android:onClick="toRegistration"
+        app:layout_constraintBottom_toTopOf="@+id/btn_JoinUsWgoogle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/illus_HomeScreen"
         app:srcCompat="@drawable/btn_joinus" />
 
     <TextView
@@ -57,10 +57,10 @@
         android:id="@+id/btn_JoinUsWgoogle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_JoinWphone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_JoinUs"
         app:srcCompat="@drawable/btn_homescreensecondary" />
 
     <LinearLayout
@@ -93,10 +93,10 @@
         android:id="@+id/btn_JoinWphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_landingScreen_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_JoinUsWgoogle"
         app:srcCompat="@drawable/btn_homescreensecondary" />
 
     <LinearLayout
@@ -128,13 +128,13 @@
         android:id="@+id/btn_landingScreen_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="toAuthentication"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_JoinWphone"
         app:srcCompat="@drawable/btn_homescreensecondary"
-        app:tint="@color/Cloud"
-        android:onClick="toAuthentication"/>
+        app:tint="@color/Cloud" />
 
     <TextView
         android:id="@+id/textView3"

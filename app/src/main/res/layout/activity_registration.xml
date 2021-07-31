@@ -19,26 +19,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/illus_reg" />
 
-    <ImageView
-        android:id="@+id/img_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="145dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_profile_reg" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="304dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="64dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_joinUs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_profile">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             style="@style/Body"
@@ -74,14 +66,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
         <TextView
             style="@style/Body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
             android:layout_marginTop="16dp"
-            />
+            android:text="Email" />
 
 
         <!--
@@ -178,12 +168,12 @@
         android:id="@+id/btn_joinUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="56dp"
         android:focusable="auto"
         android:onClick="toOnBoarding"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/btn_joinus" />
 
     <TextView
@@ -197,5 +187,15 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_joinUs"
         app:layout_constraintStart_toStartOf="@+id/btn_joinUs"
         app:layout_constraintTop_toTopOf="@+id/btn_joinUs" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
