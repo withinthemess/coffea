@@ -36,7 +36,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/illus_HomeScreen"
-        app:srcCompat="@drawable/btn_homescreencta" />
+        app:srcCompat="@drawable/btn_joinus"
+        />
 
     <TextView
         android:id="@+id/btnTxt_JoinUs"
@@ -133,6 +134,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_JoinWphone" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_JoinWphone"
+        android:onClick="toRegistration"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
