@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="H1">
-        <item name="android:textColor">@color/Phantom</item>
-        <item name="fontFamily">@font/avant_garde_demi_bt</item>
-        <item name="android:textSize">64sp</item>
-        <item name="android:letterSpacing">"-0.02"</item>
-    </style>
 </resources>

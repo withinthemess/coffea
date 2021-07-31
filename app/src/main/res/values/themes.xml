@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Coffea" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Coffea" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/BurntForest</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -12,5 +12,18 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+    </style>
+
+    <!--Made a new style to hide the action bar-->
+    <style name="Theme.CustomTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/Forest</item>
+        <item name="colorPrimaryDark">@color/Evergreen</item>
+        <item name="colorPrimaryVariant">@color/FruityRed</item>
+        <item name="colorOnPrimary">@color/Cloud</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/BurntForest</item>
+        <item name="colorSecondaryVariant">@color/Field</item>
+        <item name="colorOnSecondary">@color/Forest</item>
     </style>
 </resources>
