@@ -15,12 +15,17 @@ public class LandingScreenActivity extends AppCompatActivity {
     }
 
 
-    public void toRegistration(View view )
+    public void toAuthentication (View view)
     {
-        Intent goToRegistration = new Intent(LandingScreenActivity.this, AuthActivity.class);
-        startActivity(goToRegistration);
+        Intent goToAuthentication = new Intent(LandingScreenActivity.this, AuthActivity.class);
+        startActivity(goToAuthentication);
     }
 
+    public void toRegistration(View view)
+    {
+        Intent goToRegistration = new Intent(LandingScreenActivity.this, RegistrationActivity.class);
+        startActivity(goToRegistration);
+    }
 
 
 
