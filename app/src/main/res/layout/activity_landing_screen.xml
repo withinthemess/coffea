@@ -137,7 +137,7 @@
         app:tint="@color/Cloud" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/btn_landingScreen_login_txt"
         style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

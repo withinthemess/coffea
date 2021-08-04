@@ -4,15 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".OnBoardingActivity"
     android:background="@color/Cloud"
-    tools:context=".OnBoardingActivity">
+    >
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/btn_onboarging_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_onboarding_nothanks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_onboarding"
+        android:onClick="toHome"/>
+
+    <ImageView
+        android:id="@+id/btn_onboarding_nothanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/btn_onboarding1" />
+        app:srcCompat="@drawable/btn_homescreensecondary"
+        app:tint="@color/Cloud" />
+
+    <TextView
+        android:id="@+id/btn_onboarding_nothanks_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="no thanks"
+        android:textAppearance="@style/ButtonText"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_onboarding_nothanks"
+        app:layout_constraintEnd_toEndOf="@+id/btn_onboarding_nothanks"
+        app:layout_constraintStart_toStartOf="@+id/btn_onboarding_nothanks"
+        app:layout_constraintTop_toTopOf="@+id/btn_onboarding_nothanks" />
+
+    <TextView
+        android:id="@+id/btn_onboarging_welcome_txt"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Great, let’s go! "
+        android:textColor="@color/Cloud"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_onboarging_welcome"
+        app:layout_constraintEnd_toEndOf="@+id/btn_onboarging_welcome"
+        app:layout_constraintStart_toStartOf="@+id/btn_onboarging_welcome"
+        app:layout_constraintTop_toTopOf="@+id/btn_onboarging_welcome" />
+
+    <TextView
+        android:id="@+id/welcome_txt"
+        style="@style/H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Welcome!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_black" />
+
+    <TextView
+        android:id="@+id/welcome_body_txt"
+        style="@style/Body"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Take a quick tour to see what you can do with Coffea."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_txt" />
+
+    <ImageView
+        android:id="@+id/img_logo_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_onboarding1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
