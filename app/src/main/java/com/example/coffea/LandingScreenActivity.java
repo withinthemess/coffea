@@ -27,6 +27,11 @@ public class LandingScreenActivity extends AppCompatActivity {
         startActivity(goToRegistration);
     }
 
+    public void toHome (View view)
+    {
+        Intent goToHome = new Intent (LandingScreenActivity.this, HomeActivity.class);
+        startActivity(goToHome);
+    }
 
 
 }   
