@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainContributingActivity"
+    android:background="@color/Cloud"
+    >
+
+    <TextView
+        android:id="@+id/page_title"
+        style="@style/H3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="CONTRIBUTING"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_chart" />
+
+    <ImageView
+        android:id="@+id/btn_chart_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_chart"
+        app:layout_constraintEnd_toEndOf="@+id/btn_chart"
+        app:layout_constraintStart_toStartOf="@+id/btn_chart"
+        app:layout_constraintTop_toTopOf="@+id/btn_chart"
+        app:srcCompat="@drawable/ic_chart" />
+
+    <ImageView
+        android:id="@+id/card_mainContributing_Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_chart"
+        app:srcCompat="@drawable/illus_contributing_maincard" />
+
+    <TextView
+        android:id="@+id/card_mainContributing_txt"
+        style="@style/H2"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Your used coffee grounds can make a difference"
+        android:textColor="@color/Cloud"
+        app:layout_constraintEnd_toEndOf="@+id/card_mainContributing_Details"
+        app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details"
+        app:layout_constraintTop_toTopOf="@+id/card_mainContributing_Details" />
+
+    <TextView
+        android:id="@+id/contributingRewards"
+        style="@style/Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="What’s In It For You"
+        android:textColor="@color/Cloud"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/card_mainContributing_Details"
+        app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details"
+        app:layout_constraintTop_toBottomOf="@+id/card_mainContributing_txt" />
+
+    <TextView
+        android:id="@+id/contributingRewards_details"
+        style="@style/Body"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Contribute, get points and get discounts!"
+        android:textColor="@color/Cloud"
+        app:layout_constraintEnd_toEndOf="@+id/card_mainContributing_Details"
+        app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details"
+        app:layout_constraintTop_toBottomOf="@+id/contributingRewards" />
+
+    <TextView
+        android:id="@+id/ContributingHow"
+        style="@style/Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="How It Works"
+        android:textColor="@color/Cloud"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/card_mainContributing_Details"
+        app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details"
+        app:layout_constraintTop_toBottomOf="@+id/contributingRewards_details" />
+
+    <TextView
+        android:id="@+id/ContributingHow_details"
+        style="@style/Body"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Follow the next steps  and without any effort  or cost we’ll pick it up."
+        android:textColor="@color/Cloud"
+        app:layout_constraintEnd_toEndOf="@+id/card_mainContributing_Details"
+        app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details"
+        app:layout_constraintTop_toBottomOf="@+id/ContributingHow" />
+
+    <TextView
+        android:id="@+id/ContributingWhatUdo"
+        style="@style/Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="What You’ll Do"
+        android:textColor="@color/Cloud"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/card_mainContributing_Details"
+        app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details"
+        app:layout_constraintTop_toBottomOf="@+id/ContributingHow_details" />
+
+    <TextView
+        android:id="@+id/ContributingWhatUdo_details"
+        style="@style/Body"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="store the coffee grounds in the right conditions and thats it! You’ll be Good to go!"
+        android:textColor="@color/Cloud"
+        app:layout_constraintEnd_toEndOf="@+id/card_mainContributing_Details"
+        app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details"
+        app:layout_constraintTop_toBottomOf="@+id/ContributingWhatUdo" />
+
+    <TextView
+        android:id="@+id/tip"
+        style="@style/Bold"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="Your contribution will help save mother earth!"
+        android:textColor="@color/Cloud"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/card_mainContributing_Details"
+        app:layout_constraintEnd_toEndOf="@+id/card_mainContributing_Details"
+        app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="toContributionChecklist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_mainContributing_Details"
+        app:srcCompat="@drawable/btn_lets_contribute" />
+
+    <TextView
+        android:id="@+id/btn_letsContribute"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's Contribute"
+        android:textColor="@color/Cloud"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
