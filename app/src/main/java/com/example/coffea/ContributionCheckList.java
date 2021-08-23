@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 
 public class ContributionCheckList extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +15,12 @@ public class ContributionCheckList extends AppCompatActivity {
         setContentView(R.layout.activity_contribution_check_list);
         //Hide the navigation bar
         hideNavigationBar();
+    }
+
+    public void hideCheckBox (View view)
+    {
+        CheckBox checkbox = (ContributionCheckList.this).findViewById(R.id.myCheckbox_1);
+        checkbox.setAlpha(0.0f);
     }
 
     //Hide navigation bar even after going out and coming back to the app

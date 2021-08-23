@@ -155,7 +155,7 @@
         app:layout_constraintStart_toStartOf="@+id/card_mainContributing_Details" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/btn_letsContribute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -166,16 +166,16 @@
         app:srcCompat="@drawable/btn_lets_contribute" />
 
     <TextView
-        android:id="@+id/btn_letsContribute"
+        android:id="@+id/btn_letsContributeTxt"
         style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Let's Contribute"
         android:textColor="@color/Cloud"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_letsContribute"
+        app:layout_constraintEnd_toEndOf="@+id/btn_letsContribute"
+        app:layout_constraintStart_toStartOf="@+id/btn_letsContribute"
+        app:layout_constraintTop_toTopOf="@+id/btn_letsContribute" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
