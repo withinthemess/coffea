@@ -1,262 +1,301 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/Cloud"
-    tools:context=".HomeActivity">
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Cloud"
+            tools:context=".HomeActivity">
 
 
-    <TextView
-        android:id="@+id/page_title"
-        style="@style/H3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="HOME"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/page_title"
+                style="@style/H3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="HOME"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/btn_chart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_chart" />
+            <ImageView
+                android:id="@+id/btn_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bg_chart" />
 
-    <ImageView
-        android:id="@+id/btn_chart_ic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_chart"
-        app:layout_constraintEnd_toEndOf="@+id/btn_chart"
-        app:layout_constraintStart_toStartOf="@+id/btn_chart"
-        app:layout_constraintTop_toTopOf="@+id/btn_chart"
-        app:srcCompat="@drawable/ic_chart" />
+            <ImageView
+                android:id="@+id/btn_chart_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_chart"
+                app:layout_constraintEnd_toEndOf="@+id/btn_chart"
+                app:layout_constraintStart_toStartOf="@+id/btn_chart"
+                app:layout_constraintTop_toTopOf="@+id/btn_chart"
+                app:srcCompat="@drawable/ic_chart" />
 
 
-    <ImageView
-        android:id="@+id/card_home_contribute"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_chart"
-        app:srcCompat="@drawable/illus_home_maincard" />
+            <ImageView
+                android:id="@+id/card_home_contribute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_chart"
+                app:srcCompat="@drawable/illus_home_maincard" />
 
-    <ImageView
-        android:id="@+id/btn_contribute"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/card_home_contribute"
-        app:layout_constraintEnd_toEndOf="@+id/card_home_contribute"
-        app:srcCompat="@drawable/btn_home_contribute"
-        android:onClick="toContributing"
-        />
+            <ImageView
+                android:id="@+id/btn_contribute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="toContributing"
+                app:layout_constraintBottom_toBottomOf="@+id/card_home_contribute"
+                app:layout_constraintEnd_toEndOf="@+id/card_home_contribute"
+                app:srcCompat="@drawable/btn_home_contribute" />
 
-    <TextView
-        android:id="@+id/btn_contribute_txt"
-        style="@style/ButtonText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CONTRIBUTE"
-        android:textColor="@color/Forest"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_contribute"
-        app:layout_constraintEnd_toEndOf="@+id/btn_contribute"
-        app:layout_constraintStart_toStartOf="@+id/btn_contribute"
-        app:layout_constraintTop_toTopOf="@+id/btn_contribute" />
+            <TextView
+                android:id="@+id/btn_contribute_txt"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTRIBUTE"
+                android:textColor="@color/Forest"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_contribute"
+                app:layout_constraintEnd_toEndOf="@+id/btn_contribute"
+                app:layout_constraintStart_toStartOf="@+id/btn_contribute"
+                app:layout_constraintTop_toTopOf="@+id/btn_contribute" />
 
-    <TextView
-        android:id="@+id/card_mainContributing_txt"
-        style="@style/H2"
-        android:layout_width="355dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Your used coffee grounds can make a difference"
-        android:textColor="@color/Cloud"
-        app:layout_constraintEnd_toEndOf="@+id/card_home_contribute"
-        app:layout_constraintStart_toStartOf="@+id/card_home_contribute"
-        app:layout_constraintTop_toTopOf="@+id/card_home_contribute" />
+            <TextView
+                android:id="@+id/card_mainContributing_txt"
+                style="@style/H2"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Your used coffee grounds can make a difference"
+                android:textColor="@color/Cloud"
+                app:layout_constraintEnd_toEndOf="@+id/card_home_contribute"
+                app:layout_constraintStart_toStartOf="@+id/card_home_contribute"
+                app:layout_constraintTop_toTopOf="@+id/card_home_contribute" />
 
-    <ImageView
-        android:id="@+id/card_joinTheTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_home_contribute"
-        app:srcCompat="@drawable/card_home_jointheteam" />
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="381dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_home_contribute">
 
-    <ImageView
-        android:id="@+id/btn_flating_joinTheTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="16dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="@+id/card_joinTheTeam"
-        app:layout_constraintEnd_toEndOf="@+id/card_joinTheTeam"
-        app:srcCompat="@drawable/btn_flowting_actionbtn" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
-    <ImageView
-        android:id="@+id/ic_flating_joinTheTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_flating_joinTheTeam"
-        app:layout_constraintEnd_toEndOf="@+id/btn_flating_joinTheTeam"
-        app:layout_constraintStart_toStartOf="@+id/btn_flating_joinTheTeam"
-        app:layout_constraintTop_toTopOf="@+id/btn_flating_joinTheTeam"
-        app:srcCompat="@drawable/ic_arrow_right" />
+                    <ImageView
+                        android:id="@+id/card_joinTheTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/card_home_jointheteam" />
 
-    <TextView
-        android:id="@+id/card_joinTheTeam_txt"
-        style="@style/H3"
-        android:layout_width="157dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="16dp"
-        android:text="Join our team and deliver with us!"
-        app:layout_constraintStart_toStartOf="@+id/card_joinTheTeam"
-        app:layout_constraintTop_toTopOf="@+id/card_joinTheTeam" />
+                    <ImageView
+                        android:id="@+id/btn_flating_joinTheTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/card_joinTheTeam"
+                        app:layout_constraintEnd_toEndOf="@+id/card_joinTheTeam"
+                        app:srcCompat="@drawable/btn_flowting_actionbtn" />
 
-    <ImageView
-        android:id="@+id/card_yourPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_home_contribute"
-        app:srcCompat="@drawable/card_home_yourpoints" />
+                    <ImageView
+                        android:id="@+id/ic_flating_joinTheTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/btn_flating_joinTheTeam"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_flating_joinTheTeam"
+                        app:layout_constraintStart_toStartOf="@+id/btn_flating_joinTheTeam"
+                        app:layout_constraintTop_toTopOf="@+id/btn_flating_joinTheTeam"
+                        app:srcCompat="@drawable/ic_arrow_right" />
 
-    <TextView
-        android:id="@+id/card_yourPoints_txt"
-        style="@style/H2"
-        android:layout_width="108dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="16dp"
-        android:text="Your Points"
-        app:layout_constraintStart_toStartOf="@+id/card_yourPoints"
-        app:layout_constraintTop_toTopOf="@+id/card_yourPoints" />
+                    <TextView
+                        android:id="@+id/card_joinTheTeam_txt"
+                        style="@style/H3"
+                        android:layout_width="157dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Join our team and deliver with us!"
+                        app:layout_constraintStart_toStartOf="@+id/card_joinTheTeam"
+                        app:layout_constraintTop_toTopOf="@+id/card_joinTheTeam" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/card_yourPoints_number"
-        style="@style/H2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="16dp"
-        android:text="15"
-        app:layout_constraintBottom_toBottomOf="@+id/card_yourPoints"
-        app:layout_constraintEnd_toEndOf="@+id/card_yourPoints" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/card_featured"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_joinTheTeam"
-        app:srcCompat="@drawable/card_home_featured" />
 
-    <TextView
-        android:id="@+id/card_featured_featuredTxt"
-        style="@style/H2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="21dp"
-        android:text="Featured"
-        app:layout_constraintStart_toStartOf="@+id/card_featured"
-        app:layout_constraintTop_toTopOf="@+id/card_featured" />
+                    <ImageView
+                        android:id="@+id/card_yourPoints"
+                        android:layout_width="184dp"
+                        android:layout_height="214dp"
+                        android:adjustViewBounds="false"
+                        android:cropToPadding="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/card_home_yourpoints" />
 
-    <ImageView
-        android:id="@+id/img_featuredProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="@+id/card_featured"
-        app:layout_constraintTop_toBottomOf="@+id/card_featured_featuredTxt"
-        app:srcCompat="@drawable/img_featured_product" />
+                    <TextView
+                        android:id="@+id/card_yourPoints_txt"
+                        style="@style/H2"
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Your Points"
+                        app:layout_constraintStart_toStartOf="@+id/card_yourPoints"
+                        app:layout_constraintTop_toTopOf="@+id/card_yourPoints" />
 
-    <TextView
-        android:id="@+id/card_featured_productName"
-        style="@style/H3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="58dp"
-        android:text="Fertalizer A"
-        app:layout_constraintStart_toEndOf="@+id/img_featuredProduct"
-        app:layout_constraintTop_toBottomOf="@+id/card_featured_featuredTxt" />
+                    <TextView
+                        android:id="@+id/card_yourPoints_number"
+                        style="@style/H2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="15"
+                        app:layout_constraintBottom_toBottomOf="@+id/card_yourPoints"
+                        app:layout_constraintEnd_toEndOf="@+id/card_yourPoints" />
 
-    <TextView
-        android:id="@+id/card_featured_productDetails"
-        style="@style/Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Weight: 420 KGS / 900 LBS"
-        app:layout_constraintStart_toEndOf="@+id/img_featuredProduct"
-        app:layout_constraintTop_toBottomOf="@+id/card_featured_productName" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/card_featured_price"
-        style="@style/H3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
-        android:text="$9.99"
-        app:layout_constraintStart_toEndOf="@+id/img_featuredProduct"
-        app:layout_constraintTop_toBottomOf="@+id/card_featured_productDetails" />
+            </LinearLayout>
 
-    <ImageView
-        android:id="@+id/card_featured_visitBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/card_featured_price"
-        app:layout_constraintTop_toBottomOf="@+id/card_featured_productDetails"
-        app:srcCompat="@drawable/btn_featured_product" />
+            <ImageView
+                android:id="@+id/card_featured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                app:srcCompat="@drawable/card_home_featured" />
 
-    <TextView
-        android:id="@+id/card_featured_visitBtn_txt"
-        style="@style/ButtonText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="visit"
-        android:textColor="@color/Cloud"
-        app:layout_constraintBottom_toBottomOf="@+id/card_featured_visitBtn"
-        app:layout_constraintEnd_toEndOf="@+id/card_featured_visitBtn"
-        app:layout_constraintStart_toStartOf="@+id/card_featured_visitBtn"
-        app:layout_constraintTop_toTopOf="@+id/card_featured_visitBtn" />
+            <TextView
+                android:id="@+id/card_featured_featuredTxt"
+                style="@style/H2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="21dp"
+                android:text="Featured"
+                app:layout_constraintStart_toStartOf="@+id/card_featured"
+                app:layout_constraintTop_toTopOf="@+id/card_featured" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/img_featuredProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="@+id/card_featured"
+                app:layout_constraintTop_toBottomOf="@+id/card_featured_featuredTxt"
+                app:srcCompat="@drawable/img_featured_product" />
+
+            <TextView
+                android:id="@+id/card_featured_productName"
+                style="@style/H3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="58dp"
+                android:text="Fertalizer A"
+                app:layout_constraintStart_toEndOf="@+id/img_featuredProduct"
+                app:layout_constraintTop_toBottomOf="@+id/card_featured_featuredTxt" />
+
+            <TextView
+                android:id="@+id/card_featured_productDetails"
+                style="@style/Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Weight: 420 KGS / 900 LBS"
+                app:layout_constraintStart_toEndOf="@+id/img_featuredProduct"
+                app:layout_constraintTop_toBottomOf="@+id/card_featured_productName" />
+
+            <TextView
+                android:id="@+id/card_featured_price"
+                style="@style/H3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="32dp"
+                android:text="$9.99"
+                app:layout_constraintStart_toEndOf="@+id/img_featuredProduct"
+                app:layout_constraintTop_toBottomOf="@+id/card_featured_productDetails" />
+
+            <ImageView
+                android:id="@+id/card_featured_visitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toEndOf="@+id/card_featured_price"
+                app:layout_constraintTop_toBottomOf="@+id/card_featured_productDetails"
+                app:srcCompat="@drawable/btn_featured_product" />
+
+            <TextView
+                android:id="@+id/card_featured_visitBtn_txt"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="visit"
+                android:textColor="@color/Cloud"
+                app:layout_constraintBottom_toBottomOf="@+id/card_featured_visitBtn"
+                app:layout_constraintEnd_toEndOf="@+id/card_featured_visitBtn"
+                app:layout_constraintStart_toStartOf="@+id/card_featured_visitBtn"
+                app:layout_constraintTop_toTopOf="@+id/card_featured_visitBtn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</ScrollView>

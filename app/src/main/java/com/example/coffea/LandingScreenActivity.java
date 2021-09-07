@@ -54,7 +54,7 @@ public class LandingScreenActivity extends AppCompatActivity {
 
     public void toHome (View view)
     {
-        Intent goToHome = new Intent (LandingScreenActivity.this, HomeActivity.class);
+        Intent goToHome = new Intent (LandingScreenActivity.this, ContributionCheckList.class);
         startActivity(goToHome);
     }
 

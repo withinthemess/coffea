@@ -78,12 +78,13 @@
 
     <ImageView
         android:id="@+id/img_logo_black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="143dp"
+        android:layout_height="205dp"
         android:layout_marginTop="88dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_onboarding1" />
+        app:srcCompat="@drawable/img_onboarding" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
