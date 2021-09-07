@@ -148,6 +148,7 @@
 
     <ImageView
         android:id="@+id/btn_yourLocation"
+        android:onClick="animateToYourLocationDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -232,6 +233,101 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_coffeeDetails" />
+
+    <TextView
+        android:id="@+id/yourLocationTip"
+        style="@style/Small"
+        android:layout_width="328dp"
+        android:alpha="0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Let us know where you are!"
+        android:textColor="@color/LightSlate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_yourLocation" />
+
+    <ImageView
+        android:id="@+id/btn_useMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourLocationTip"
+        app:srcCompat="@drawable/btn_location_option" />
+
+    <ImageView
+        android:id="@+id/ic_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_useMyLocation"
+        app:layout_constraintStart_toStartOf="@+id/btn_useMyLocation"
+        app:layout_constraintTop_toTopOf="@+id/btn_useMyLocation"
+        app:srcCompat="@drawable/ic_direction" />
+
+    <TextView
+        android:id="@+id/btn_useMyLocation_txt"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:alpha="0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="8dp"
+        android:text="use my location"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_useMyLocation"
+        app:layout_constraintStart_toEndOf="@+id/ic_direction"
+        app:layout_constraintTop_toTopOf="@+id/btn_useMyLocation" />
+
+
+    <ImageView
+        android:id="@+id/btn_useMyAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_useMyLocation"
+        app:srcCompat="@drawable/btn_location_option" />
+
+    <ImageView
+        android:id="@+id/ic_globe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_useMyAddress"
+        app:layout_constraintStart_toStartOf="@+id/btn_useMyAddress"
+        app:layout_constraintTop_toTopOf="@+id/btn_useMyAddress"
+        app:srcCompat="@drawable/ic_globe" />
+
+    <TextView
+        android:id="@+id/btn_useMyAddress_txt"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="8dp"
+        android:text="use my address"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_useMyAddress"
+        app:layout_constraintStart_toEndOf="@+id/ic_globe"
+        app:layout_constraintTop_toTopOf="@+id/btn_useMyAddress" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

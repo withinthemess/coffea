@@ -20,8 +20,8 @@ public class ContributionCheckList extends AppCompatActivity {
     boolean airTightStatus = false;
     boolean tempStatus = false;
     CheckBox drynessCheckBox, airTightCheckBox, tempCheckBox;
-    TextView storageTipTxt, coffeeDetailsTxt, coffeeDetailsTip;
-    ImageView coffeeDetailsBtn;
+    TextView storageTipTxt, coffeeDetailsTxt, coffeeDetailsTip, yourLocationTxt, yourLocationTip, useMyLocationTxt, useMyAddressTxt;
+    ImageView coffeeDetailsBtn, yourLocationBtn, useMyLocationBtn, useMyAddressBtn, icGlobe, icDirection ;
     float translationYvalue = -768;
     EditText coffeeDetailsMultiLine;
 
@@ -41,6 +41,17 @@ public class ContributionCheckList extends AppCompatActivity {
         coffeeDetailsTxt = findViewById(R.id.btn_coffeeDetails_txt);
         coffeeDetailsTip = findViewById(R.id.coffeeDetailsTip);
         coffeeDetailsMultiLine = findViewById(R.id.multiLine_coffeeDetails);
+        yourLocationBtn = findViewById(R.id.btn_yourLocation);
+        yourLocationTxt = findViewById(R.id.btn_yourLocation_txt);
+        yourLocationTip = findViewById(R.id.yourLocationTip);
+        useMyAddressBtn = findViewById(R.id.btn_useMyAddress);
+        useMyAddressTxt  = findViewById(R.id.btn_useMyAddress_txt);
+        useMyLocationBtn = findViewById(R.id.btn_useMyLocation);
+        useMyLocationTxt  = findViewById(R.id.btn_useMyLocation_txt);
+        icGlobe  = findViewById(R.id.ic_globe);
+        icDirection  = findViewById(R.id.ic_direction);
+
+
 
     }
 
@@ -152,7 +163,45 @@ public class ContributionCheckList extends AppCompatActivity {
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void animateToYourLocationDetails (View view)
+    {
+        //Hide completed section
+        coffeeDetailsTip.animate().alpha(.0f);
+        coffeeDetailsMultiLine.animate().alpha(.0f);
 
+        //Move the next step into focus
+        yourLocationBtn.animate().translationY(translationYvalue);
+        yourLocationTxt.animate().translationY(translationYvalue);
+        yourLocationTip.animate().translationY(translationYvalue);
+        useMyLocationBtn.animate().translationY(translationYvalue);
+        useMyLocationTxt.animate().translationY(translationYvalue);
+        icDirection.animate().translationY(translationYvalue);
+        useMyAddressBtn.animate().translationY(translationYvalue);
+        useMyAddressTxt.animate().translationY(translationYvalue);
+        icGlobe.animate().translationY(translationYvalue);
+
+
+        //Change Button to active visually
+        yourLocationBtn.setColorFilter(ContextCompat.getColor(ContributionCheckList.this, R.color.Forest), PorterDuff.Mode.SRC_IN);
+        yourLocationTxt.setTextColor(getColor(R.color.Cloud));
+
+        //Show new checks
+        yourLocationTip.animate().alpha(1f);
+        yourLocationTip.animate().alpha(1f);
+        useMyLocationBtn.animate().alpha(1f);
+        useMyLocationTxt.animate().alpha(1f);
+        icDirection.animate().alpha(1f);
+        useMyAddressBtn.animate().alpha(1f);
+        useMyAddressTxt.animate().alpha(1f);
+        icGlobe.animate().alpha(1f);
+
+
+
+
+
+
+    }
 
 
 
