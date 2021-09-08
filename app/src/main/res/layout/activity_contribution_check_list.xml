@@ -356,4 +356,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pickUpDateTip" />
 
+    <ImageView
+        android:id="@+id/btn_confirmContribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="202dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_confirmcontribution" />
+
+    <TextView
+        android:id="@+id/btn_confirmContributionTxt"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:text="Let's Contribute!"
+        android:textColor="@color/Cloud"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_confirmContribution"
+        app:layout_constraintEnd_toEndOf="@+id/btn_confirmContribution"
+        app:layout_constraintStart_toStartOf="@+id/btn_confirmContribution"
+        app:layout_constraintTop_toTopOf="@+id/btn_confirmContribution" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/illus_checkspage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

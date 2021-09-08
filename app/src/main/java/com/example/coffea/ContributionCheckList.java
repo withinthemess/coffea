@@ -19,12 +19,20 @@ public class ContributionCheckList extends AppCompatActivity {
     boolean drynessStatus = false;
     boolean airTightStatus = false;
     boolean tempStatus = false;
+
     CheckBox drynessCheckBox, airTightCheckBox, tempCheckBox;
+
     TextView storageTipTxt, coffeeDetailsTxt, coffeeDetailsTip, yourLocationTxt, yourLocationTip,
-            useMyLocationTxt, useMyAddressTxt, pickUpDateTxt, pickUpDateTip, confirmedPickUpDate;
-    ImageView coffeeDetailsBtn, yourLocationBtn, useMyLocationBtn, useMyAddressBtn, icGlobe, icDirection, pickUpDateBtn, icCorrect ;
-    float translationYvalue = -700;
+            useMyLocationTxt, useMyAddressTxt, pickUpDateTxt, pickUpDateTip, confirmedPickUpDate,
+            confirmContributionTxt;
+
+    ImageView coffeeDetailsBtn, yourLocationBtn, useMyLocationBtn, useMyAddressBtn, icGlobe,
+            icDirection, pickUpDateBtn, icCorrect, confirmContributionBtn;
+
     EditText coffeeDetailsMultiLine;
+
+    float translationYvalue = -700;
+
 
 
     @Override
@@ -57,6 +65,8 @@ public class ContributionCheckList extends AppCompatActivity {
         icCorrect = findViewById(R.id.ic_correct);
         confirmedPickUpDate = findViewById(R.id.confirmedDateTxt);
         pickUpDateTip = findViewById(R.id.pickUpDateTip);
+        confirmContributionBtn = findViewById(R.id.btn_confirmContribution);
+        confirmContributionTxt = findViewById(R.id.btn_confirmContributionTxt);
 
     }
 
@@ -119,7 +129,6 @@ public class ContributionCheckList extends AppCompatActivity {
 
         return tempStatus;
     }
-
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -221,11 +230,16 @@ public class ContributionCheckList extends AppCompatActivity {
         icCorrect.animate().translationY(translationYvalue);
         pickUpDateTip.animate().translationY(translationYvalue);
         confirmedPickUpDate.animate().translationY(translationYvalue);
+        //confirmContributionBtn.animate().translationY(translationYvalue);
+        //confirmContributionTxt.animate().translationY(translationYvalue);
 
 
         //Show new checks
         pickUpDateTip.animate().alpha(1f);
         confirmedPickUpDate.animate().alpha(1f);
+        confirmContributionBtn.animate().alpha(1f);
+        confirmContributionTxt.animate().alpha(1f);
+
 
 
 
@@ -233,6 +247,7 @@ public class ContributionCheckList extends AppCompatActivity {
         pickUpDateBtn.setColorFilter(ContextCompat.getColor(ContributionCheckList.this, R.color.Forest), PorterDuff.Mode.SRC_IN);
         icCorrect.setColorFilter(ContextCompat.getColor(ContributionCheckList.this, R.color.Cloud), PorterDuff.Mode.SRC_IN);
         pickUpDateTxt.setTextColor(getColor(R.color.Cloud));
+
 
 
     }
