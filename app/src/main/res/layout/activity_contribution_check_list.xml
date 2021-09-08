@@ -294,8 +294,9 @@
         android:id="@+id/btn_useMyAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:alpha="0"
         android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:onClick="animateToPickDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_useMyLocation"
@@ -362,6 +363,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="202dp"
         android:alpha="0"
+        android:onClick="toHome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -381,7 +383,7 @@
         app:layout_constraintTop_toTopOf="@+id/btn_confirmContribution" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/illus_checksPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"

@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
@@ -252,6 +253,13 @@ public class ContributionCheckList extends AppCompatActivity {
 
     }
 
+    public void toHome (View view)
+    {
+        Intent goToHome = new Intent(ContributionCheckList.this, HomeActivity.class);
+        startActivity(goToHome);
+
+
+    }
 
 
 
