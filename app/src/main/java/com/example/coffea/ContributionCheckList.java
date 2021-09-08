@@ -20,9 +20,10 @@ public class ContributionCheckList extends AppCompatActivity {
     boolean airTightStatus = false;
     boolean tempStatus = false;
     CheckBox drynessCheckBox, airTightCheckBox, tempCheckBox;
-    TextView storageTipTxt, coffeeDetailsTxt, coffeeDetailsTip, yourLocationTxt, yourLocationTip, useMyLocationTxt, useMyAddressTxt;
-    ImageView coffeeDetailsBtn, yourLocationBtn, useMyLocationBtn, useMyAddressBtn, icGlobe, icDirection ;
-    float translationYvalue = -768;
+    TextView storageTipTxt, coffeeDetailsTxt, coffeeDetailsTip, yourLocationTxt, yourLocationTip,
+            useMyLocationTxt, useMyAddressTxt, pickUpDateTxt, pickUpDateTip, confirmedPickUpDate;
+    ImageView coffeeDetailsBtn, yourLocationBtn, useMyLocationBtn, useMyAddressBtn, icGlobe, icDirection, pickUpDateBtn, icCorrect ;
+    float translationYvalue = -700;
     EditText coffeeDetailsMultiLine;
 
 
@@ -33,6 +34,7 @@ public class ContributionCheckList extends AppCompatActivity {
         //Hide the navigation bar
         hideNavigationBar();
 
+        //Linking the objects with the xml views
         drynessCheckBox = findViewById(R.id.checkBox_Dry);
         tempCheckBox = findViewById(R.id.checkBox_temp);
         airTightCheckBox = findViewById(R.id.checkBox_airTight);
@@ -50,8 +52,11 @@ public class ContributionCheckList extends AppCompatActivity {
         useMyLocationTxt  = findViewById(R.id.btn_useMyLocation_txt);
         icGlobe  = findViewById(R.id.ic_globe);
         icDirection  = findViewById(R.id.ic_direction);
-
-
+        pickUpDateTxt = findViewById(R.id.btn_pickDate_txt);
+        pickUpDateBtn = findViewById(R.id.btn_pickDate);
+        icCorrect = findViewById(R.id.ic_correct);
+        confirmedPickUpDate = findViewById(R.id.confirmedDateTxt);
+        pickUpDateTip = findViewById(R.id.pickUpDateTip);
 
     }
 
@@ -140,11 +145,11 @@ public class ContributionCheckList extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void animateToCoffeeDetails ()
     {
-        //Hide the completed check boxes
-        storageTipTxt.animate().alpha(.0f);
-        drynessCheckBox.animate().alpha(.0f);
-        airTightCheckBox.animate().alpha(.0f);
-        tempCheckBox.animate().alpha(.0f);
+        //Hide the completed check boxes (Storage check boxes)
+        storageTipTxt.animate().alpha(0f);
+        drynessCheckBox.animate().alpha(0f);
+        airTightCheckBox.animate().alpha(0f);
+        tempCheckBox.animate().alpha(0f);
 
         //Move the next step into focus
         //Translation Y: Move step up
@@ -166,9 +171,9 @@ public class ContributionCheckList extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void animateToYourLocationDetails (View view)
     {
-        //Hide completed section
-        coffeeDetailsTip.animate().alpha(.0f);
-        coffeeDetailsMultiLine.animate().alpha(.0f);
+        //Hide completed section [coffee details]
+        coffeeDetailsTip.animate().alpha(0f);
+        coffeeDetailsMultiLine.animate().alpha(0f);
 
         //Move the next step into focus
         yourLocationBtn.animate().translationY(translationYvalue);
@@ -188,7 +193,6 @@ public class ContributionCheckList extends AppCompatActivity {
 
         //Show new checks
         yourLocationTip.animate().alpha(1f);
-        yourLocationTip.animate().alpha(1f);
         useMyLocationBtn.animate().alpha(1f);
         useMyLocationTxt.animate().alpha(1f);
         icDirection.animate().alpha(1f);
@@ -196,9 +200,39 @@ public class ContributionCheckList extends AppCompatActivity {
         useMyAddressTxt.animate().alpha(1f);
         icGlobe.animate().alpha(1f);
 
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void animateToPickDate (View view)
+    {
+        //Hide the completed location check
+        yourLocationTip.animate().alpha(0f);
+        useMyLocationBtn.animate().alpha(0f);
+        useMyLocationTxt.animate().alpha(0f);
+        icDirection.animate().alpha(0f);
+        useMyAddressBtn.animate().alpha(0f);
+        useMyAddressTxt.animate().alpha(0f);
+        icGlobe.animate().alpha(0f);
+
+        //Move the next step into focus
+        pickUpDateBtn.animate().translationY(translationYvalue);
+        pickUpDateTxt.animate().translationY(translationYvalue);
+        icCorrect.animate().translationY(translationYvalue);
+        pickUpDateTip.animate().translationY(translationYvalue);
+        confirmedPickUpDate.animate().translationY(translationYvalue);
+
+
+        //Show new checks
+        pickUpDateTip.animate().alpha(1f);
+        confirmedPickUpDate.animate().alpha(1f);
 
 
 
+        //Change Button to active visually
+        pickUpDateBtn.setColorFilter(ContextCompat.getColor(ContributionCheckList.this, R.color.Forest), PorterDuff.Mode.SRC_IN);
+        icCorrect.setColorFilter(ContextCompat.getColor(ContributionCheckList.this, R.color.Cloud), PorterDuff.Mode.SRC_IN);
+        pickUpDateTxt.setTextColor(getColor(R.color.Cloud));
 
 
     }

@@ -127,7 +127,7 @@
         android:id="@+id/btn_coffeeDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:onClick="isStorageChecked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,10 +148,10 @@
 
     <ImageView
         android:id="@+id/btn_yourLocation"
-        android:onClick="animateToYourLocationDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:onClick="animateToYourLocationDetails"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_coffeeDetails"
@@ -183,7 +183,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/ic_correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -202,20 +202,21 @@
         android:layout_marginLeft="8dp"
         android:text="Pick Up Date"
         app:layout_constraintBottom_toBottomOf="@+id/btn_pickDate"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/ic_correct"
         app:layout_constraintTop_toTopOf="@+id/btn_pickDate" />
 
     <EditText
         android:id="@+id/multiLine_coffeeDetails"
-        android:fontFamily="@font/montserrat_medium"
         android:layout_width="338dp"
         android:layout_height="94dp"
         android:layout_marginTop="16dp"
         android:alpha="0"
         android:background="@color/Dorian"
         android:ems="10"
+        android:fontFamily="@font/montserrat_medium"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
@@ -251,8 +252,9 @@
         android:id="@+id/btn_useMyLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:alpha="0"
         android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:onClick="animateToPickDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/yourLocationTip"
@@ -328,6 +330,30 @@
         app:layout_constraintStart_toEndOf="@+id/ic_globe"
         app:layout_constraintTop_toTopOf="@+id/btn_useMyAddress" />
 
+    <TextView
+        android:id="@+id/pickUpDateTip"
+        style="@style/Small"
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:text="When do you want us to stop by?"
+        android:textColor="@color/LightSlate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pickDate" />
 
+
+    <TextView
+        android:id="@+id/confirmedDateTxt"
+        style="@style/Body"
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:text="June, 20, 2021"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickUpDateTip" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
