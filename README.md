@@ -3,8 +3,6 @@ Coffea aspires to reduce greenhouse gas emissions caused by coffee grounds waste
 
 Promo video can be accessed here: https://youtu.be/GkZg9GHfAu8
 
-Design System can be accessed here: https://www.figma.com/file/07hIiqDo5yT2EBFC1fNvJC/Coffea-Design-System?node-id=180%3A603
-
 Coffea is a digital platform that aims to facilitate the process of collecting and recycling used coffee grounds and selling products made out of the resulting recycled materials. Coffea will allow users to contribute their used coffee grounds and it will reward users with points that can be used to get discounts on products bought from the platform like fertilizers. Coffea will also allow users to join our team and help in the pick-up process which makes the platform from the community to the community.
 ![iMac - 78](https://user-images.githubusercontent.com/46242342/137586257-c8ffbe0b-1c0c-43e1-939c-bb56d798d4a6.png)
 
