@@ -1,50 +1,34 @@
-package com.example.coffea;
+package com.example.coffea
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.coffea.R
+import android.content.Intent
+import android.view.View
+import com.example.coffea.OnBoardingActivity
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
-public class RegistrationActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+class RegistrationActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_registration)
         //Hide the navigation bar
-        hideNavigationBar();
+        hideNavigationBar()
     }
 
     //Hide navigation bar even after going out and coming back to the app
-    @Override
-    protected void onResume()
-    {
-        super.onResume();
-        hideNavigationBar();
+    override fun onResume() {
+        super.onResume()
+        hideNavigationBar()
     }
-
 
     //Hide the navigation bar
-    private void hideNavigationBar ()
-    {
-        this.getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
-                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-
-        );
-
-
-
-
+    private fun hideNavigationBar() {
+        this.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
     }
 
-
-    public void toOnBoarding (View view)
-    {
-        Intent goToOnBoarding = new Intent(RegistrationActivity.this, OnBoardingActivity.class);
-        startActivity(goToOnBoarding);
+    fun toOnBoarding(view: View?) {
+    //    val goToOnBoarding = Intent(this@RegistrationActivity, OnBoardingActivity::class.java)
+    //    startActivity(goToOnBoarding)
     }
-
-
 }

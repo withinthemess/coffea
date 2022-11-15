@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CustomTheme">
-        <activity android:name=".ContributionCheckList"></activity>
+        <activity android:name=".ContributionCheckList" />
         <activity android:name=".MainContributingActivity" />
         <activity android:name=".OnBoardingActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".AuthActivity" />
-        <activity android:name=".LandingScreenActivity">
+        <activity android:name=".LandingScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

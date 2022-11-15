@@ -1,62 +1,45 @@
-package com.example.coffea;
+package com.example.coffea
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.coffea.R
+import android.content.Intent
+import android.view.View
+import com.example.coffea.RegistrationActivity
+import com.example.coffea.ContributionCheckList
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
-public class LandingScreenActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_landing_screen);
+class LandingScreenActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_landing_screen)
         //Hide the navigation bar
-        hideNavigationBar();
+        hideNavigationBar()
     }
 
     //Hide navigation bar even after going out and coming back to the app
-    @Override
-    protected void onResume()
-    {
-        super.onResume();
-        hideNavigationBar();
+    override fun onResume() {
+        super.onResume()
+        hideNavigationBar()
     }
-
 
     //Hide the navigation bar
-    private void hideNavigationBar ()
-    {
-        this.getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
-                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-
-        );
-
-
-
-
+    private fun hideNavigationBar() {
+        this.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
     }
 
-
-    public void toAuthentication (View view)
-    {
-        Intent goToAuthentication = new Intent(LandingScreenActivity.this, AuthActivity.class);
-        startActivity(goToAuthentication);
+    fun toAuthentication(view: View?) {
+        //    Intent goToAuthentication = new Intent(LandingScreenActivity.this, AuthActivity.class);
+        //   startActivity(goToAuthentication);
     }
 
-    public void toRegistration(View view)
-    {
-        Intent goToRegistration = new Intent(LandingScreenActivity.this, RegistrationActivity.class);
-        startActivity(goToRegistration);
+    fun toRegistration(view: View?) {
+    //    val goToRegistration = Intent(this@LandingScreenActivity, RegistrationActivity::class.java)
+    //    startActivity(goToRegistration)
     }
 
-    public void toHome (View view)
-    {
-        Intent goToHome = new Intent (LandingScreenActivity.this, ContributionCheckList.class);
-        startActivity(goToHome);
+    fun toHome(view: View?) {
+    //    val goToHome = Intent(this@LandingScreenActivity, ContributionCheckList::class.java)
+    //    startActivity(goToHome)
     }
-
-
-}   
+}
